@@ -3,15 +3,15 @@ import psycopg2
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
-import setting
+from setting import *
 
 # Establish PostgreSQL database connection
 db_connection = psycopg2.connect(
-    host = setting.HOST,      # PostgreSQL server address (localhost or IP)
-    user = setting.USER,          # PostgreSQL username (admin as per your earlier command)
-    password = setting.PASS,      # PostgreSQL password (admin as per your earlier command)
-    port = setting.PORT,             # Default PostgreSQL port
-    database = setting.DB       # Specify your PostgreSQL database name here
+    host = HOST,      # PostgreSQL server address (localhost or IP)
+    user = USER,          # PostgreSQL username (admin as per your earlier command)
+    password = PASS,      # PostgreSQL password (admin as per your earlier command)
+    port = PORT,             # Default PostgreSQL port
+    database = DB       # Specify your PostgreSQL database name here
 )
 
 # Modify SQL query to join users and discount_usage_history
